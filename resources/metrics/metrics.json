@@ -1,0 +1,15 @@
+{
+  "classification": {
+    "roc_auc": true,
+    "accuracy": true
+  },
+  "regression": {
+    "r2": false,
+    "mean_squared_error": false,
+    "explained_variance": false
+  },
+  "clustering": {
+    "mutual_info_score": true,
+    "completeness_score": true
+  }
+}
