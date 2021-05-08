@@ -19,14 +19,16 @@ class Metrics(ABC, Limits):
         self.max: Any = prediction_data[self.name]["max"]
         self.bigger_is_better: bool = prediction_data[self.name]["bigger_is_better"]
 
-        self.header_info()
-
-    def header_info(self) -> None:
+    def __enter__(self) -> "Metrics":
         first_part: str = f"\nMetric {self.name} goes from {self.min} to {self.max}."
         adaptive_text = "bigger" if self.bigger_is_better else "smaller"
         second_part: str = " " + f"A {adaptive_text} value is better."
         output = first_part + second_part
         print(output)
+        return self
+
+    def __exit__(self, *args) -> None:
+        pass
 
     @abstractmethod
     def score_in_range(self, score: float) -> bool:
