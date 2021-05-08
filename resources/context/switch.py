@@ -17,3 +17,9 @@ class Switch(ABC):
             else:
                 return method()
         raise AttributeError
+
+    @staticmethod
+    def available_cases():
+        available_cases = [func for func in dir(Switch) if callable(getattr(Switch, func)) and not (
+                    func.startswith("__") or (func is "case" or "available_cases"))]
+        return tuple(available_cases)
