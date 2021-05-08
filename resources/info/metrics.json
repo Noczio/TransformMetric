@@ -1,0 +1,33 @@
+{
+  "classification": {
+    "roc_auc": {
+      "bigger_is_better": true
+    },
+    "accuracy": {
+      "bigger_is_better": true
+    }
+  },
+  "regression": {
+    "r2": {
+      "bigger_is_better": true
+    },
+    "mean_squared_error": {
+      "bigger_is_better": false
+
+    },
+    "neg_mean_squared_error": {
+      "bigger_is_better": true
+    },
+    "explained_variance": {
+      "bigger_is_better": false
+    }
+  },
+  "clustering": {
+    "mutual_info_score": {
+      "bigger_is_better": true
+    },
+    "completeness_score": {
+      "bigger_is_better": true
+    }
+  }
+}

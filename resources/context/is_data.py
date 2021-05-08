@@ -4,5 +4,5 @@ from typing import Any
 
 class IsData(ABC):
     @abstractmethod
-    def is_data(self, data: Any) -> bool:
+    def is_data(self, *args, **kwargs) -> bool:
         pass
