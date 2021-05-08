@@ -14,4 +14,4 @@ class SysArgumentHandler(ArgumentHandler):
             metric_values: tuple = args[2::]
             self._sys_validator.handle_arguments(metric_name, metric_values)
         else:
-            print("Not enough arguments.")
+            print("\nNot enough arguments. Choose a metric and at least one score.")

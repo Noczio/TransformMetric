@@ -7,15 +7,20 @@ from resources.other.path import normal_path, debug_path
 
 class Metrics(ABC, Limits):
     is_bigger_better: bool
+    metric_value: float
     name: str
 
-    def __init__(self, metric_value: float):
-        self.metric_value = metric_value
+    def header_info(self) -> None:
+        first_part: str = f"\nMetric {self.name} goes from {self.min} to {self.max}."
+        adaptive_text = "bigger" if self.is_bigger_better else "smaller"
+        second_part: str = " " + f"A {adaptive_text} value is better."
+        output = first_part + second_part
+        print(output)
 
     @abstractmethod
-    def __repr__(self) -> str:
+    def is_is_range(self, value: float) -> bool:
         pass
 
     @abstractmethod
-    def is_is_range(self) -> bool:
+    def __repr__(self) -> str:
         pass
