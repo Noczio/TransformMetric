@@ -17,7 +17,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_are_valid_3(self):
         handler = SysArgumentHandler(debug=True)
-        parameters = ("test.py", "r2", "1.234")
+        parameters = ("test.py", "R2", "1.234")
         handler.handle_arguments(*parameters)
         self.assertTrue(True)
 
@@ -29,13 +29,13 @@ class MyTestCase(unittest.TestCase):
 
     def test_are_valid_5(self):
         handler = SysArgumentHandler(debug=True)
-        parameters = ("test.py", "roc_auc", "1", "0", "0.5", "s", "-1")
+        parameters = ("test.py", "Roc_Auc", "1", "0", "0.5", "s", "-1")
         handler.handle_arguments(*parameters)
         self.assertTrue(True)
 
     def test_are_valid_6(self):
         handler = SysArgumentHandler(debug=True)
-        parameters = ("test.py", "accuracy", "1", "0", "0.5", "s", "-1")
+        parameters = ("test.py", "Accuracy", "1", "0", "0.5", "s", "-1")
         handler.handle_arguments(*parameters)
         self.assertTrue(True)
 

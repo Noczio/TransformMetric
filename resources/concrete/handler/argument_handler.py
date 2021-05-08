@@ -11,7 +11,7 @@ class SysArgumentHandler(ArgumentHandler):
 
     def handle_arguments(self, *args) -> None:
         if have_enough_arguments(args):
-            metric_name: str = args[1]
+            metric_name: str = args[1].lower()
             metric_values: tuple = args[2::]
             self._sys_validator.handle_arguments(metric_name, metric_values)
         else:
