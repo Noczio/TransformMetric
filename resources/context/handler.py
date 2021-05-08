@@ -3,7 +3,11 @@ from resources.other.load import load_json_file
 from resources.other.path import normal_path, debug_path
 
 
-class SysData(ABC):
+class ArgumentHandler(ABC):
+
+    def __init__(self, debug: bool = False) -> None:
+        self._debug = debug
+
     @abstractmethod
-    def parameters_are_valid(self, *args) -> bool:
+    def handle_arguments(self, *args) -> None:
         pass

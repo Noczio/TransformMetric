@@ -6,15 +6,16 @@ from resources.other.path import normal_path, debug_path
 
 
 class Metrics(ABC, Limits):
-    _changing_text: dict = {True: "A bigger valuer is better.", False: "A smaller value is better."}
     is_bigger_better: bool
     name: str
 
-    def __repr__(self) -> str:
-        first_part: str = f"Metric {self.name} goes from  {self.min} to {self.max}."
-        representation: str = first_part + " " + self._changing_text[self.is_bigger_better]
-        return representation
+    def __init__(self, metric_value: float):
+        self.metric_value = metric_value
 
     @abstractmethod
-    def is_is_range(self, value: float) -> bool:
+    def __repr__(self) -> str:
+        pass
+
+    @abstractmethod
+    def is_is_range(self) -> bool:
         pass
