@@ -9,7 +9,7 @@ class RocAuc(Metrics):
         self.score = score
         return self.min <= self.score <= self.max
 
-    def __enter__(self):
+    def __enter__(self) -> "Metrics":
         first_part: str = f"\nMetric {self.name} goes from {self.min} to {self.max}."
         adaptive_text = "bigger" if self.bigger_is_better else "smaller"
         second_part: str = f"A {adaptive_text} value is better. This metric shows the trade-off between sensitivity " \
