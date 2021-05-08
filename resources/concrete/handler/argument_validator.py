@@ -12,5 +12,5 @@ class SysValidator(ArgumentHandler):
         if is_metric_name_valid(metric_name, self._valid_metrics):
             show_metrics(metric_name, metric_values)
         else:
-            print(f"\nInput: \"{metric_name}\" is not a ML metric or it is not implemented yet. Use one of the "
+            print(f"\nInput \"{metric_name}\" is not a ML metric or it is not implemented yet. Use one of the "
                   f"following metrics:\n{self._valid_metrics}")
