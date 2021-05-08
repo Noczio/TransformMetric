@@ -1,5 +1,6 @@
-from resources.concrete.is_data.options import IsDataPossibilities
 from typing import Any
+
+from resources.concrete.is_data.options import IsDataPossibilities
 
 
 class IsDataValid:

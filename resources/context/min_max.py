@@ -1,6 +1,6 @@
-from typing import Any, Union
+from typing import Any
 
 
 class Limits:
-    min: [Any, float]
-    max: [Any, float]
+    min: Any
+    max: Any

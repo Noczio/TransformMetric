@@ -2,8 +2,8 @@ from resources.concrete.is_data.caller import IsDataValid
 from resources.concrete.metrics.caller import MetricCreator
 from resources.context.handler import ArgumentHandler
 from resources.other.load import load_json_file
-from resources.other.metric_valid import is_metric_name_valid
 from resources.other.path import execution_metric_options
+from resources.other.valid import is_metric_name_valid
 
 
 class SysValidator(ArgumentHandler):

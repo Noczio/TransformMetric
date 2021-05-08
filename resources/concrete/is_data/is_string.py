@@ -1,5 +1,6 @@
-from resources.context.is_data import IsData
 from typing import Any
+
+from resources.context.is_data import IsData
 
 
 class IsString(IsData):

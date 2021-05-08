@@ -2,7 +2,7 @@ from resources.context.metrics import Metrics
 
 
 class MutualInfoScore(Metrics):
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__()
         self.name: str = "mutual info score"
         self.min: int = 0
@@ -13,6 +13,6 @@ class MutualInfoScore(Metrics):
         self.metric_value = value
         return self.metric_value >= self.min
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         representation: str = f"\n{self.name}: {self.metric_value}. No transformation available."
         return representation

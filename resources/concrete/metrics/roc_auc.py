@@ -2,7 +2,7 @@ from resources.context.metrics import Metrics
 
 
 class RocAuc(Metrics):
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__()
         self.name: str = "roc auc"
         self.min: int = 0
@@ -21,6 +21,6 @@ class RocAuc(Metrics):
         output = first_part + " " + second_part
         print(output)
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         representation: str = f"\n{self.name}: {self.metric_value} means {self.metric_value * 100} % score."
         return representation

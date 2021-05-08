@@ -13,6 +13,6 @@ class Accuracy(Metrics):
         self.metric_value = value
         return self.min <= self.metric_value <= self.max
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         representation: str = f"\n{self.name}: {self.metric_value} means {self.metric_value * 100} % score."
         return representation

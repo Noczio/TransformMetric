@@ -2,7 +2,7 @@ from resources.context.metrics import Metrics
 
 
 class CompletenessScore(Metrics):
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__()
         self.name: str = "completeness score"
         self.min: int = 0
@@ -13,6 +13,6 @@ class CompletenessScore(Metrics):
         self.metric_value = value
         return self.min <= self.metric_value <= self.max
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         representation: str = f"\n{self.name}: {self.metric_value} means {self.metric_value * 100} % score."
         return representation
