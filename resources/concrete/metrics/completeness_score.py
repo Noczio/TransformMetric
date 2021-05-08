@@ -2,17 +2,13 @@ from resources.context.metrics import Metrics
 
 
 class CompletenessScore(Metrics):
-    def __init__(self) -> None:
-        super().__init__()
-        self.name: str = "completeness score"
-        self.min: int = 0
-        self.max: int = 1
-        self.is_bigger_better: bool = True
+    def __init__(self, debug: bool = False) -> None:
+        super().__init__("clustering", "completeness_score", debug)
 
-    def is_is_range(self, value: float) -> bool:
-        self.metric_value = value
-        return self.min <= self.metric_value <= self.max
+    def score_in_range(self, score: float) -> bool:
+        self.score = score
+        return self.min <= self.score <= self.max
 
     def __repr__(self) -> str:
-        representation: str = f"\n{self.name}: {self.metric_value} means {self.metric_value * 100} % score."
+        representation: str = f"\n{self.name}: {self.score} means {self.score * 100} % score."
         return representation

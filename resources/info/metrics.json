@@ -1,33 +1,48 @@
 {
   "classification": {
     "roc_auc": {
-      "bigger_is_better": true
+      "bigger_is_better": true,
+      "min": 0,
+      "max": 1
     },
     "accuracy": {
-      "bigger_is_better": true
+      "bigger_is_better": true,
+      "min": 0,
+      "max": 1
     }
   },
   "regression": {
     "r2": {
-      "bigger_is_better": true
+      "bigger_is_better": true,
+      "min": "- Infinity",
+      "max": "+ Infinity"
     },
     "mean_squared_error": {
-      "bigger_is_better": false
-
+      "bigger_is_better": false,
+      "min": 0,
+      "max": "+ Infinity"
     },
     "neg_mean_squared_error": {
-      "bigger_is_better": true
+      "bigger_is_better": true,
+      "min": "- Infinity",
+      "max": 0
     },
     "explained_variance": {
-      "bigger_is_better": true
+      "bigger_is_better": true,
+      "min": "- Infinity",
+      "max": 1
     }
   },
   "clustering": {
     "mutual_info_score": {
-      "bigger_is_better": true
+      "bigger_is_better": true,
+      "min": 0,
+      "max": "+ Infinity"
     },
     "completeness_score": {
-      "bigger_is_better": true
+      "bigger_is_better": true,
+      "min": 0,
+      "max": 1
     }
   }
 }

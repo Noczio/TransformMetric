@@ -13,33 +13,33 @@ from resources.concrete.metrics.completeness_score import CompletenessScore
 class MetricsPossibilities(Switch):
 
     @staticmethod
-    def roc_auc() -> Metrics:
-        return RocAuc()
+    def roc_auc(debug: bool = False) -> Metrics:
+        return RocAuc(debug)
 
     @staticmethod
-    def accuracy() -> Metrics:
-        return Accuracy()
+    def accuracy(debug: bool = False) -> Metrics:
+        return Accuracy(debug)
 
     @staticmethod
-    def r2() -> Metrics:
-        return R2()
+    def r2(debug: bool = False) -> Metrics:
+        return R2(debug)
 
     @staticmethod
-    def mean_squared_error() -> Metrics:
-        return MeanSquaredError()
+    def mean_squared_error(debug: bool = False) -> Metrics:
+        return MeanSquaredError(debug)
 
     @staticmethod
-    def neg_mean_squared_error() -> Metrics:
-        return NegMeanSquaredError()
+    def neg_mean_squared_error(debug: bool = False) -> Metrics:
+        return NegMeanSquaredError(debug)
 
     @staticmethod
-    def explained_variance() -> Metrics:
-        return ExplainedVariance()
+    def explained_variance(debug: bool = False) -> Metrics:
+        return ExplainedVariance(debug)
 
     @staticmethod
-    def mutual_info_score() -> Metrics:
-        return MutualInfoScore()
+    def mutual_info_score(debug: bool = False) -> Metrics:
+        return MutualInfoScore(debug)
 
     @staticmethod
-    def completeness_score() -> Metrics:
-        return CompletenessScore()
+    def completeness_score(debug: bool = False) -> Metrics:
+        return CompletenessScore(debug)
