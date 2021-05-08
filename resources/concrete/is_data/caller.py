@@ -4,6 +4,6 @@ from typing import Any
 
 class IsDataValid:
     @staticmethod
-    def is_data(data_validator: str, data: Any) -> bool:
-        validator: IsData = IsDataPossibilities.case(data_validator)
+    def is_data(validation_case: str, data: Any) -> bool:
+        validator: IsData = IsDataPossibilities.case(validation_case)
         return validator.is_data(data)

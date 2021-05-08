@@ -10,7 +10,7 @@ def is_metric_name_valid(metric_name: str, valid_metrics: tuple) -> bool:
 
 def is_metric_values_valid(metric_values: tuple, metric: Metrics) -> bool:
     for value in metric_values:
-        is_float: bool = IsDataValid.is_data("numeric", value)
+        is_float: bool = IsDataValid.is_data("number", value)
         is_valid: bool = True if is_float and metric.is_is_range(float(value)) else False
         if not is_valid:
             return False
