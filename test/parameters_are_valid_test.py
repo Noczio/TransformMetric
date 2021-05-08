@@ -51,6 +51,12 @@ class MyTestCase(unittest.TestCase):
         handler.handle_arguments(*parameters)
         self.assertTrue(True)
 
+    def test_are_valid_9(self):
+        handler = SysArgumentHandler(debug=True)
+        parameters = ("test.py", "explained_variance", "1", "0", "0.5", "s", "-1", "340", -345)
+        handler.handle_arguments(*parameters)
+        self.assertTrue(True)
+
     def test_not_implemented_1(self):
         handler = SysArgumentHandler(debug=True)
         parameters = ("test.py", "nonsense", "1", "0", "0.5", "s", "-1", "340")
