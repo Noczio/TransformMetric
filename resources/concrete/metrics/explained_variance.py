@@ -2,8 +2,8 @@ from resources.context.metrics import Metrics
 
 
 class ExplainedVariance(Metrics):
-    def __init__(self, debug: bool = False) -> None:
-        super().__init__("regression", "explained_variance", debug)
+    def __init__(self) -> None:
+        super().__init__("regression", "explained_variance")
 
     def score_in_range(self, score: float) -> bool:
         self.score = score

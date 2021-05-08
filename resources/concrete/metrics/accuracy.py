@@ -2,8 +2,8 @@ from resources.context.metrics import Metrics
 
 
 class Accuracy(Metrics):
-    def __init__(self, debug: bool = False) -> None:
-        super().__init__("classification", "accuracy", debug)
+    def __init__(self) -> None:
+        super().__init__("classification", "accuracy")
 
     def score_in_range(self, score: float) -> bool:
         self.score = score

@@ -2,8 +2,8 @@ from resources.context.metrics import Metrics
 
 
 class MeanSquaredError(Metrics):
-    def __init__(self, debug: bool = False) -> None:
-        super().__init__("regression", "mean_squared_error", debug)
+    def __init__(self) -> None:
+        super().__init__("regression", "mean_squared_error")
 
     def score_in_range(self, score: float) -> bool:
         self.score = score

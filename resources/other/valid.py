@@ -1,6 +1,4 @@
-from resources.concrete.metrics.caller import MetricCreator
 from resources.concrete.is_data.caller import IsDataValid
-from resources.context.metrics import Metrics
 
 
 def is_metric_name_valid(metric_name: str, valid_metrics: tuple) -> bool:

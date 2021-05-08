@@ -1,14 +1,15 @@
 from abc import ABC, abstractmethod
 from typing import Any
 
+import resources.concrete.status.mode as app_status
 from resources.context.min_max import Limits
-from resources.other.path import execution_metric_options
 from resources.other.load import load_json_file
+from resources.other.path import execution_metric_options
 
 
 class Metrics(ABC, Limits):
-    def __init__(self, problem_name: str, metric_name: str, debug: bool = False):
-        metric_path: str = execution_metric_options[bool(debug)]
+    def __init__(self, problem_name: str, metric_name: str):
+        metric_path: str = execution_metric_options[app_status.debug]
         metric_data: dict = load_json_file(metric_path)
         prediction_data: dict = metric_data[problem_name]
         self.name: str = metric_name

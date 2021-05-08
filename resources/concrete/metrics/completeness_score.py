@@ -2,8 +2,8 @@ from resources.context.metrics import Metrics
 
 
 class CompletenessScore(Metrics):
-    def __init__(self, debug: bool = False) -> None:
-        super().__init__("clustering", "completeness_score", debug)
+    def __init__(self) -> None:
+        super().__init__("clustering", "completeness_score")
 
     def score_in_range(self, score: float) -> bool:
         self.score = score

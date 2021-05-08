@@ -2,8 +2,8 @@ from resources.context.metrics import Metrics
 
 
 class MutualInfoScore(Metrics):
-    def __init__(self, debug: bool = False) -> None:
-        super().__init__("clustering", "mutual_info_score", debug)
+    def __init__(self) -> None:
+        super().__init__("clustering", "mutual_info_score")
 
     def score_in_range(self, score: float) -> bool:
         self.score = score
