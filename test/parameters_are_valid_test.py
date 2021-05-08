@@ -57,7 +57,13 @@ class MyTestCase(unittest.TestCase):
         handler.handle_arguments(*parameters)
         self.assertTrue(True)
 
-    def test_not_implemented_1(self):
+    def test_file_not_found(self):
+        with self.assertRaises(FileNotFoundError):
+            handler = SysArgumentHandler(debug=False)
+            parameters = ("test.py", "mutual_info_score", "1", "0", "0.5", "s", "-1", "340")
+            handler.handle_arguments(*parameters)
+
+    def test_not_implemented_metric(self):
         handler = SysArgumentHandler(debug=True)
         parameters = ("test.py", "nonsense", "1", "0", "0.5", "s", "-1", "340")
         handler.handle_arguments(*parameters)
