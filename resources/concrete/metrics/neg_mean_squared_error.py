@@ -10,5 +10,5 @@ class NegMeanSquaredError(Metrics):
         return self.score <= self.max
 
     def __repr__(self) -> str:
-        representation: str = f"\n{self.name}: {self.score} is the same as mean squared error, but negated."
+        representation: str = f"{self.score} is the same as mean squared error, but negated."
         return representation

@@ -10,5 +10,5 @@ class CompletenessScore(Metrics):
         return self.min <= self.score <= self.max
 
     def __repr__(self) -> str:
-        representation: str = f"\n{self.name}: {self.score} means {self.score * 100} % score."
+        representation: str = f"{self.score} means {self.score * 100} % score."
         return representation

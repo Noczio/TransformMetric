@@ -4,7 +4,7 @@ from resources.other.show import show_metrics
 from resources.other.valid import is_metric_name_valid
 
 
-class SysValidator(ArgumentHandler):
+class SysArgumentValidator(ArgumentHandler):
     def __init__(self) -> None:
         self._valid_metrics = MetricsPossibilities.available_cases()
 

@@ -1,10 +1,9 @@
-from typing import Any
-
 from resources.concrete.is_data.options import IsDataPossibilities
+from resources.context.is_data import IsData
 
 
-class IsDataValid:
+class IsDataCreator:
     @staticmethod
-    def is_data(validation_case: str, data: Any) -> bool:
+    def create_data_validator(validation_case: str) -> IsData:
         validator: IsData = IsDataPossibilities.case(validation_case)
-        return validator.is_data(data)
+        return validator

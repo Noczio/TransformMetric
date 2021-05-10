@@ -4,7 +4,7 @@ from resources.context.is_data import IsData
 
 
 class IsNumeric(IsData):
-    def is_data(self, data: Any) -> bool:
+    def is_data_valid(self, data: Any) -> bool:
         try:
             float(data)
             return True

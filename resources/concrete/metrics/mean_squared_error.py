@@ -10,6 +10,5 @@ class MeanSquaredError(Metrics):
         return self.score >= self.min
 
     def __repr__(self) -> str:
-        representation: str = f"\n{self.name}: {self.score} is the same as mean absolute error " \
-                              f"{self.score ** 2}."
+        representation: str = f"{self.score} is the same as mean absolute error {self.score ** 2}."
         return representation

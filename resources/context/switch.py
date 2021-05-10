@@ -13,7 +13,6 @@ class Switch(ABC):
 
     @classmethod
     def available_cases(cls) -> tuple:
-        cases = [func for func in dir(cls) if callable(getattr(cls, func)) and not func.startswith("__")]
-        cases.remove("case")
-        cases.remove("available_cases")
+        cases = [func for func in dir(cls) if callable(getattr(cls, func)) and not (
+                func.startswith("__") or func in ("case", "available_cases"))]
         return tuple(cases)

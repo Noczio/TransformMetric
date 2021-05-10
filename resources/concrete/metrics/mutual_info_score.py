@@ -10,5 +10,5 @@ class MutualInfoScore(Metrics):
         return self.score >= self.min
 
     def __repr__(self) -> str:
-        representation: str = f"\n{self.name}: {self.score}. No transformation available."
+        representation: str = f"{self.score}. No transformation available."
         return representation

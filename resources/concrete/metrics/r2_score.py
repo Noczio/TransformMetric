@@ -10,7 +10,7 @@ class R2(Metrics):
         return True
 
     def __repr__(self) -> str:
-        first_part: str = f"\n{self.name}: {self.score}."
+        first_part: str = f"{self.score}."
         additional: str = f"Because it is a negative number, it should get fixed to 0." if self.score < 0 \
             else "No Transformation available."
         representation: str = first_part + " " + additional
