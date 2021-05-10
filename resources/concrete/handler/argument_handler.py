@@ -1,5 +1,5 @@
 import resources.concrete.status.mode as app_status
-from resources.concrete.handler.argument_validator import SysArgumentValidator
+from resources.concrete.validator.argument_validator import SysArgumentValidator
 from resources.context.handler import ArgumentHandler
 from resources.other.enough import have_enough_arguments
 
