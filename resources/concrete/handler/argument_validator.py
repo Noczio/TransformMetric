@@ -7,7 +7,6 @@ from resources.other.valid import is_metric_name_valid
 class SysArgumentValidator(ArgumentValidator):
     def __init__(self) -> None:
         self._valid_metrics = MetricsPossibilities.available_cases()
-        self._valid_kwargs = ("metric_name",  "metric_values")
 
     def validate_arguments(self, **kwargs) -> None:
         metric_name: str = kwargs["metric_name"]
