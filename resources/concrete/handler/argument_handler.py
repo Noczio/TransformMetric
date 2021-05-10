@@ -12,7 +12,8 @@ class SysArgumentHandler(ArgumentHandler):
     def handle_arguments(self, *args) -> None:
         if have_enough_arguments(args, threshold=3):
             metric_name: str = args[1].lower()
-            metric_values: tuple = args[2::]
-            self._sys_validator.handle_arguments(metric_name, metric_values)
+            metric_value: tuple = args[2::]
+            kwargs: dict = {"metric_name": metric_name, "metric_value": metric_value}
+            self._sys_validator.validate_arguments(**kwargs)
         else:
             print("\nNot enough arguments. Choose a metric and at least one score.")

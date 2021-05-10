@@ -23,7 +23,7 @@ class Metrics(ABC, Limits):
         first_part: str = f"\nMetric {self.name} goes from {self.min} to {self.max}."
         adaptive_text = "bigger" if self.bigger_is_better else "smaller"
         second_part: str = f"A {adaptive_text} value is better."
-        output = first_part + second_part + "\n"  # this last \n is for aesthetic purposes
+        output = first_part + " " + second_part + "\n"  # this last \n is for aesthetic purposes
         print(output)
         return self
 
